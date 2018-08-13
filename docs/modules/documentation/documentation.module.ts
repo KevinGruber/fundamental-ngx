@@ -51,6 +51,7 @@ import { TimePickerDocsComponent } from './containers/time-picker/time-picker-do
 import { InstallationDocsComponent } from './containers/installation/installation.component';
 import { UsageDocsComponent } from './containers/usage/usage.component';
 import { InternationalizationDocsComponent } from './containers/internationalization/internationalization.component';
+import { HomeDocsComponent } from './containers/home/home.component';
 
 import { COMPONENT_SCHEMAS } from './containers/schemas';
 
@@ -66,7 +67,7 @@ const ROUTES: Routes = [
         path: '',
         component: DocumentationComponent,
         children: [
-            { path: '', redirectTo: 'installation', pathMatch: 'full' },
+            { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'action-bar', component: ActionBarDocsComponent },
             { path: 'alert', component: AlertDocsComponent },
             { path: 'badgeLabel', component: BadgeLabelDocsComponent },
@@ -97,7 +98,8 @@ const ROUTES: Routes = [
             { path: 'tree', component: TreeDocsComponent },
             { path: 'installation', component: InstallationDocsComponent },
             { path: 'usage', component: UsageDocsComponent },
-            { path: 'rtl', component: InternationalizationDocsComponent }
+            { path: 'rtl', component: InternationalizationDocsComponent },
+            { path: 'home', component: HomeDocsComponent }
         ]
     }
 ];
@@ -144,7 +146,8 @@ const ROUTES: Routes = [
         NavbarDocsComponent,
         InstallationDocsComponent,
         UsageDocsComponent,
-        InternationalizationDocsComponent
+        InternationalizationDocsComponent,
+        HomeDocsComponent
     ],
     imports: [
         HighlightJsModule.forRoot({
